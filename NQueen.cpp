@@ -1,5 +1,5 @@
-/*@@¤H¤u´¼¼z§@·~-2
-  @@¨Ï¥Îª¦¤sºtºâªk¹ê§@¤K¬Ó¦Z*/
+/*@@äººå·¥æ™ºæ…§ä½œæ¥­-2
+  @@ä½¿ç”¨çˆ¬å±±æ¼”ç®—æ³•å¯¦ä½œå…«çš‡å*/
 
 #include <iostream>
 #include <random>
@@ -18,7 +18,7 @@ public:
 	}
 
 
-	//½Æ»svector : main_vector  to  copy_vector
+	//è¤‡è£½vector : main_vector  to  copy_vector
 	void vector_cpy(std::vector<int> &main_vector, std::vector<int> &copy_vector) {
 		copy_vector.clear();
 		copy_vector.assign(main_vector.begin(), main_vector.end());
@@ -27,9 +27,9 @@ public:
 
 	void rand() {
 		clean();
-		std::random_device rd; //§Q¥ÎµwÅé¨t²Îµ¹ªº­È¨Ó¨ú­È
-		std::default_random_engine generator(rd()); //ªì©l¤Æ¡A¨Ã§Q¥Îrd()ªº­È§ä¥X¬Û¹ïÀ³ªººØ¤l½X??
-		std::uniform_int_distribution<int> distribution(0, _size - 1); //³]©w½d³ò»P¨M©w­n²£¥Í¤°»òÃş«¬ªº¶Ã¼Æ ex:int float..
+		std::random_device rd; //åˆ©ç”¨ç¡¬é«”ç³»çµ±çµ¦çš„å€¼ä¾†å–å€¼
+		std::default_random_engine generator(rd()); //åˆå§‹åŒ–ï¼Œä¸¦åˆ©ç”¨rd()çš„å€¼æ‰¾å‡ºç›¸å°æ‡‰çš„ç¨®å­ç¢¼??
+		std::uniform_int_distribution<int> distribution(0, _size - 1); //è¨­å®šç¯„åœèˆ‡æ±ºå®šè¦ç”¢ç”Ÿä»€éº¼é¡å‹çš„äº‚æ•¸ ex:int float..
 		for (int i = 0; i < _size; i++) {
 			int randnumber = distribution(generator);
 			X.push_back(i);
@@ -46,7 +46,7 @@ public:
 
 	void set_map() {
 		map.clear();
-		//ªì©l¤Æ´Ñ½L
+		//åˆå§‹åŒ–æ£‹ç›¤
 		for (int i = 0; i < _size; i++) {
 			std::vector<int> tempv;
 			for (int j = 0; j < _size; j++) {
@@ -67,9 +67,9 @@ public:
 		for (int i = 0; i < _size; i++) {
 			for (int j = 0; j < _size; j++) {
 				if (map[i][j] == 1)
-					std::cout << "¢®";
+					std::cout << "â•³";
 				else
-					std::cout << "¡Ä";
+					std::cout << "ï¼¿";
 			}
 			std::cout << "\n";
 		}
@@ -166,13 +166,12 @@ public:
 
 int main() {
 	int n;
-	std::cin >> n;
 	while (true) {
-		NQueen queen(n);
-		queen.start();
 		std::cin >> n;
 		if (n <= 3)
 			break;
+		NQueen queen(n);
+		queen.start();
 	}
 	
 
