@@ -1,4 +1,5 @@
 use Hill-Climbing Algorithm for eight queens. 
+
 price function use slope.
 
 | n  | cost time |
@@ -12,9 +13,14 @@ price function use slope.
 |100|    251.556s|
 
 the table not so precise.
+
 have lucky and computer performance affect.
 
 test computer: 
+
   cpu: i7-3370 3.40GHz
+  
   ram: 32GB
+  
   use visual studio release compile
+  
