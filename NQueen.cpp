@@ -4,11 +4,14 @@
 #include <iostream>
 #include <random>
 #include <vector>
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 class NQueen {
 protected:
 	std::vector<std::vector<int>> map;
-	
+
 	int _size;
 
 public:
@@ -19,7 +22,7 @@ public:
 
 
 	//複製vector : main_vector  to  copy_vector
-	void vector_cpy(std::vector<int> &main_vector, std::vector<int> &copy_vector) {
+	void vector_cpy(std::vector<int>& main_vector, std::vector<int>& copy_vector) {
 		copy_vector.clear();
 		copy_vector.assign(main_vector.begin(), main_vector.end());
 	}
@@ -97,7 +100,7 @@ public:
 	}
 
 
-	int price(std::vector<int> x,std::vector<int> y) {
+	int price(std::vector<int> x, std::vector<int> y) {
 		int count = 0;
 		for (int i = 0; i < _size; i++) {
 			for (int j = i + 1; j < _size; j++) {
@@ -115,7 +118,7 @@ public:
 	}
 
 
-	bool move(std::vector<int> &y,int row) {
+	bool move(std::vector<int>& y, int row) {
 		int p = price(X, y);
 		for (int col = 0; col < _size; col++) {
 			y.at(row) = col;//set
@@ -126,7 +129,7 @@ public:
 		}
 		return false;
 	}
-	
+
 
 	bool search() {
 		for (int i = 0; i < _size; i++) {
@@ -134,7 +137,7 @@ public:
 			vector_cpy(Y, y);
 			if (move(y, i)) {
 				vector_cpy(y, Y);
-				std::cout << "End of Search.  price=" << price(X,Y) << std::endl;
+				std::cout << "End of Search.  price=" << price(X, Y) << std::endl;
 				return true;
 			}
 		}
@@ -170,10 +173,14 @@ int main() {
 		std::cin >> n;
 		if (n <= 3)
 			break;
+		clock_t start_time, end_time;
+		start_time = clock();
 		NQueen queen(n);
 		queen.start();
+		end_time = clock();
+		std::cout << "end. used:" << (end_time - start_time) / (double)(clock_t(1000)) << "s" << std::endl;
 	}
-	
+
 
 	system("pause");
 	return 0;
