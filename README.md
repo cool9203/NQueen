@@ -1,6 +1,6 @@
 use Hill-Climbing Algorithm for eight queens. 
 
-price function use slope.
+evaluation function is calculate slope.
 
 | n  | execution time |
 |:--:|---------------:|
@@ -16,11 +16,11 @@ the table not so precise.
 
 have lucky and computer performance affect.
 
-test computer: 
+|    test computer    |
+|:---:|---------------|
+|cpu|i7-3370 3.40GHz|
+|ram|32GB|
 
-  cpu: i7-3370 3.40GHz
-  
-  ram: 32GB
-  
-  use visual studio release compile
-  
+use visual studio release to compile.
+
+if you need this code, can copy in your code.
