@@ -16,8 +16,8 @@ the table not so precise.
 
 have lucky and computer performance affect.
 
-|    test computer    |
-|:---:|--------------:|
+|   |  test computer  |
+|:--:|---------------:|
 |cpu|i7-3370 3.40GHz|
 |ram|32GB|
 
