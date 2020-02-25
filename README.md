@@ -2,8 +2,8 @@ use Hill-Climbing Algorithm for eight queens.
 
 price function use slope.
 
-| n  | cost time |
-|:--:|----------:|
+| n  | execution time |
+|:--:|---------------:|
 | 8 |      0.013s|
 | 10|      0.017s|
 | 20|      0.045s|
