@@ -13,11 +13,18 @@ protected:
 	std::vector<std::vector<int>> map;
 
 	int _size;
+	std::default_random_engine generator; //偽亂數產生器
+	std::random_device rd; //利用硬體系統給的值來得到一個隨機數
+	std::uniform_int_distribution<int> distribution;
 
 public:
 	std::vector<int> X, Y;
 	NQueen(int assign) {
 		_size = assign;
+		generator.seed(rd()); //設定偽亂數產生器的seed
+		//設定亂數分布範圍
+		std::uniform_int_distribution<int>::param_type param(0, this->_size - 1);
+		distribution.param(param);
 	}
 
 
@@ -30,11 +37,8 @@ public:
 
 	void rand() {
 		clean();
-		std::random_device rd; //利用硬體系統給的值來取值
-		std::default_random_engine generator(rd()); //初始化，並利用rd()的值找出相對應的種子碼??
-		std::uniform_int_distribution<int> distribution(0, _size - 1); //設定範圍與決定要產生什麼類型的亂數 ex:int float..
 		for (int i = 0; i < _size; i++) {
-			int randnumber = distribution(generator);
+			int randnumber = this->distribution(this->generator);
 			X.push_back(i);
 			Y.push_back(randnumber);
 		}
