@@ -41,8 +41,3 @@ have lucky and computer performance affect.
 |ram|32GB|
 
 use visual studio release to compile.
-
----
-
-**`if you need this code, can copy in your code.`**
-
