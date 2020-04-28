@@ -4,7 +4,7 @@
 #include <iostream>
 #include <random>
 #include <vector>
-#include <time.h>
+#include <windows.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -173,12 +173,15 @@ int main() {
 		std::cin >> n;
 		if (n <= 3)
 			break;
-		clock_t start_time, end_time;
-		start_time = clock();
+		LARGE_INTEGER start_time, end_time, frequency_time;
+		QueryPerformanceFrequency(&frequency_time);
+		QueryPerformanceCounter(&start_time);
+
 		NQueen queen(n);
 		queen.start();
-		end_time = clock();
-		std::cout << "end. used:" << (end_time - start_time) / (double)(clock_t(1000)) << "s" << std::endl;
+
+		QueryPerformanceCounter(&end_time);
+		printf("used:%lf s\n\n", (end_time.QuadPart - start_time.QuadPart) / (double)(frequency_time.QuadPart));
 	}
 
 
