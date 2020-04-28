@@ -77,7 +77,7 @@ public:
 			double m = _y / _x;
 			if (_x == 0.0 || _y == 0.0 || m == 1.0 || m == -1.0) {
 				count++;
-				//continue;
+				continue;
 			}
 		}
 		return count;
