@@ -1,5 +1,5 @@
 **NQueen.cpp** : use Hill-Climbing Algorithm for eight queens.  
-evaluation function is calculate slope.  
+evaluation function is calculate slope. time complex=O(n^2)   
 if local optimum than restart.  
 
 | n  | execution time | restart times|one epoch execution time|
@@ -15,7 +15,7 @@ if local optimum than restart.
 ---
 
 **fast_version.cpp** : use Hill-Climbing Algorithm for eight queens, **but is unstable**, maybe restart many times.  
-evaluation function is calculate slope.  
+evaluation function is calculate slope. time complex=O(n)   
 if local optimum than restart.  
 
 | n  | execution time | restart times|one epoch execution time|
