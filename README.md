@@ -31,6 +31,7 @@ if local optimum than restart.
 
 ---  
 one epoch execution time = execution time / (restart times + 1)
+
 table not so precise.  
 have lucky and computer performance affect.   
 
@@ -40,6 +41,8 @@ have lucky and computer performance affect.
 |ram|32GB|
 
 use visual studio release to compile.
+
+---
 
 **`if you need this code, can copy in your code.`**
 
