@@ -41,5 +41,3 @@ have lucky and computer performance affect.
 |ram|32GB|
 
 use visual studio release to compile.
-
-**LICENSE : MIT**
