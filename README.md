@@ -28,6 +28,7 @@ if local optimum than restart.
 | 50|     0.7567s| 376|0.002007s|
 |100|    12.0820s| 815|0.014806s|
 |200|   238.0028s|2080|0.114369s|
+|300|  1653.6015s|3916|0.422160s|
 
 ---  
 one epoch execution time = execution time / (restart times + 1)
